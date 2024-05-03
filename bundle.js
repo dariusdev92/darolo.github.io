@@ -9,7 +9,7 @@ var username = prompt("Su nombre.") || "Random".concat(Date.now());
 var form = document.querySelector('#form');
 var input = form.querySelector('#text');
 var chat = document.querySelector('#chat');
-var webSocket = new WebSocket("ws://ecsdev17.ex-cle.la:1880/ws/chat");
+var webSocket = new WebSocket("wss://ecsdev17.ex-cle.la:1880/ws/chat");
 var sendMessage = function (ws, name) { return function (event) {
     event.preventDefault();
     var message = {
